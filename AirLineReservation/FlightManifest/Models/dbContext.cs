@@ -4,10 +4,9 @@ namespace FlightManifest.Models
     public class flightContext : DbContext
     {
 
-        public FlightContext(DbContextOptions<FlightContext> options)
+        public flightContext(DbContextOptions<flightContext> options)
          : base(options)
         {
-
         }
         public DbSet<flightItem> flightItems { get; set; }
 
