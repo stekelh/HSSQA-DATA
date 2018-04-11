@@ -1,0 +1,11 @@
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\bin\Debug\netcoreapp2.0\FlightManifest.deps.json
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\bin\Debug\netcoreapp2.0\FlightManifest.runtimeconfig.json
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\bin\Debug\netcoreapp2.0\FlightManifest.runtimeconfig.dev.json
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\bin\Debug\netcoreapp2.0\FlightManifest.dll
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\bin\Debug\netcoreapp2.0\FlightManifest.pdb
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.csprojResolveAssemblyReference.cache
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.csproj.CoreCompileInputs.cache
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.AssemblyInfoInputs.cache
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.AssemblyInfo.cs
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.dll
+C:\HSSQA-DATA\AirLineReservation\FlightManifest\obj\Debug\netcoreapp2.0\FlightManifest.pdb
