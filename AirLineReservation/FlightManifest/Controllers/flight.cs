@@ -14,7 +14,7 @@ namespace FlightManifest.Controllers
         [HttpGet]
         public IEnumerable<flightItem> GetAll()
         {
-
+            
             return _context.flightItems.ToList();
 
         }
@@ -38,6 +38,48 @@ namespace FlightManifest.Controllers
                 _context.SaveChanges();
             }
         }
+       [HttpPost]
+        public IActionResult Create([FromBody] flightItem item)
+        {
+            if (item == null){
+                return BadRequest();
+            }
+            _context.flightItems.Add(item);
+            _context.SaveChanges();
+            return CreatedAtRoute("Getflight", new { id = item.Id}, item);
+        }
+        [HttpPut("{id}")]
+        public IActionResult Update(long id, [FromBody] flightItem item)
+        {
+            if (item == null || item.Id != id)
+            {
+                return BadRequest();
+            }
+            var flight = _context.flightItems.FirstOrDefault(t => t.Id ==id);
+            if (flight == null)
+            {
+                return NotFound();
+            
+            }
+            flight.IsComplete = item.IsComplete;
+            flight.Name = item.Name;
+            flight.Seat = item.Seat;
 
+            _context.flightItems.Update(flight);
+            _context.SaveChanges();
+            return new NoContentResult();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            var flight = _context.flightItems.FirstOrDefault(t => t.Id == id);
+            if (flight == null)
+            {
+                return NotFound();
+            }
+            _context.flightItems.Remove(flight);
+            _context.SaveChanges();
+            return new NoContentResult();
+        }
     }
 }

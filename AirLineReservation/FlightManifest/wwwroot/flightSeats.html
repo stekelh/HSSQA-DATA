@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product App</title>
+</head>
+
+<body>
+    <div>
+        <h2>All Flight Seats</h2>
+        <ul id="flights" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="flightId" size="5" />
+        <input type="button" value="Search" onClick="find();" />
+        <p id="flight" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var url = 'api/flight';
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(apiUrl)
+                .done(function (data) {
+                    // On success, 'data' contains a list of flights.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the flight.
+                        $('<li>', {
+                            text: formatItem(item)
+                        }).appendTo($('#flights'));
+                    });
+                });
+        });
+
+        function find() {
+            var id = $('#flightId').val();
+            $.getJSON(apiUrl + '/' + id).done(function (data) {
+                    $('#flight').text(formatItem(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#flight').text('Error: ' + err);
+                });
+
+        }
+    </script>
+</body>
+
+</html>
