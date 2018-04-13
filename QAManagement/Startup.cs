@@ -25,7 +25,9 @@ namespace QAManagment
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+#pragma warning disable CS0436 // Type conflicts with imported type
             services.AddDbContext<QADataContext>(options
+#pragma warning restore CS0436 // Type conflicts with imported type
             => options.UseSqlServer(Configuration.GetConnectionString(("QADbConnection"))));
         }
 
