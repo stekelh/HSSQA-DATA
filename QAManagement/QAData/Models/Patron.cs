@@ -13,7 +13,8 @@ namespace QAData.Models
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
 
-        //public virtual IDCard IDCard {get; set;}
+        public virtual QACard QACard {get; set;}
+        public virtual QABranch QAHome {get; set;}
 
     }
 }

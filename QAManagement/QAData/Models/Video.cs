@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
-namespace QAManagement.QAData.Models
+using System.ComponentModel.DataAnnotations;
+namespace QAData.Models
 {
-    public class Video
+    public class Video : QAAsset
     {
+        [Required]
+        public string Director {get; set;}
     }
 }
