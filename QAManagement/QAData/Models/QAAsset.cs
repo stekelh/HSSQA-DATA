@@ -17,7 +17,7 @@ namespace QAData.Models
       public string DbName {get; set;}
 
       [Required]
-      public DateTime CreatedDate {get; set;} /* ?Storeing DateTime when dataset was create */
+    public DateTime CreatedDate {get; set;} /* ?Storeing DateTime when dataset was create */
 
      [Required]
      public string Status {get; set;}
@@ -29,8 +29,7 @@ namespace QAData.Models
 
      public int NumberOfDataSets {get; set;}
 
-     public virtual QAAsset Asset { get; set; }
-
+     public virtual QABranch Location { get; set; }
 
 
     }
